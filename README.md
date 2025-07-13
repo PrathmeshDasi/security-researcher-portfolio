@@ -1,4 +1,4 @@
-# 🛡️ Cybersecurity Portfolio — Prathmesh Dasi
+# 🛡️ Cybersecurity Portfolio — Prathamesh Dasi
 
 A minimal and professional portfolio built using **Node.js**, **Express**, and **EJS** to showcase cybersecurity skills, bug bounty findings, blog posts, and research highlights.
 
@@ -22,10 +22,5 @@ A minimal and professional portfolio built using **Node.js**, **Express**, and *
 - **Email**: Nodemailer
 - **Deployment**: Render (Free Tier)
 
-## ▶️ Run Locally
-
-```bash
-git clone https://github.com/PrathmeshDasi/security-researcher-portfolio.git
-cd security-portfolio
-npm install
-npm start
+## 🔥 Reach Out 
+- LinkedIn - Prathamesh Dasi
