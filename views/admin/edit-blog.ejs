@@ -1,0 +1,14 @@
+<%- include('../partials/header') %>
+
+<section class="content">
+  <h2>Edit Blog Post</h2>
+  <form method="POST" action="/admin/update-blog">
+    <input type="hidden" name="originalTitle" value="<%= blog.title %>" />
+    <input type="text" name="title" value="<%= blog.title %>" required />
+    <textarea name="content" rows="6" required><%= blog.content %></textarea>
+    <input type="text" name="tags" value="<%= blog.tags.join(', ') %>" />
+    <button type="submit">Update Blog Post</button>
+  </form>
+</section>
+
+<%- include('../partials/footer') %>

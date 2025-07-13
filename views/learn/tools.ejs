@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head', {
+  page: 'About',
+  metaTitle: 'About | Prathmesh Dasi',
+  metaDescription: 'Learn more about Prathmesh Dasi, a self-taught security researcher from India.',
+  canonicalUrl: 'http://localhost:3000/about'
+}) %>
+<body>
+  <%- include('partials/header') %>
+
+<main class="content">
+  <h1>🛠️ Essential Tools for Cybersecurity & Bug Bounty</h1>
+  <p>Whether you're doing recon, fuzzing, or exploitation, tools are a big part of your workflow. Here’s a breakdown of the most-used tools across different stages of hacking.</p>
+
+  <hr>
+
+  <h2>🔍 Reconnaissance</h2>
+  <ul class="resource-list">
+    <li><strong>subfinder</strong> – Subdomain enumeration from passive sources.</li>
+    <li><strong>amass</strong> – Comprehensive passive & active subdomain enumeration.</li>
+    <li><strong>assetfinder</strong> – Quickly find subdomains related to a domain.</li>
+    <li><strong>httpx</strong> – Probes for working HTTP/S servers.</li>
+    <li><strong>waybackurls</strong> / <strong>gau</strong> – Find historical URLs via Wayback Machine & other sources.</li>
+  </ul>
+
+  <h2>🧪 Fuzzing & Discovery</h2>
+  <ul class="resource-list">
+    <li><strong>ffuf</strong> – Fast web fuzzer for directories, parameters, headers, etc.</li>
+    <li><strong>dirsearch</strong> – Directory brute-forcing tool written in Python.</li>
+    <li><strong>ParamSpider</strong> – Finds hidden parameters on web apps.</li>
+    <li><strong>Dalfox</strong> – XSS scanning and fuzzing tool.</li>
+  </ul>
+
+  <h2>🌐 Web Proxy & Manual Testing</h2>
+  <ul class="resource-list">
+    <li><strong>Burp Suite</strong> – The #1 tool for web app testing, used for intercepting, modifying, and analyzing requests.</li>
+    <li><strong>Postman</strong> – Excellent for API testing, works well with REST and GraphQL endpoints.</li>
+    <li><strong>Browser DevTools</strong> – Use the network and console tabs to analyze and manipulate behavior.</li>
+  </ul>
+
+  <h2>🧰 Scanning & Enumeration</h2>
+  <ul class="resource-list">
+    <li><strong>nmap</strong> – Network scanning, port discovery, and service identification.</li>
+    <li><strong>nikto</strong> – Web server scanner for outdated or misconfigured services.</li>
+    <li><strong>whatweb</strong> / <strong>wappalyzer</strong> – Fingerprint web technologies and stack.</li>
+  </ul>
+
+  <h2>🧠 Automation & Scripting</h2>
+  <ul class="resource-list">
+    <li><strong>Python</strong> – Write custom recon tools, PoCs, and scripts.</li>
+    <li><strong>Bash</strong> – Automate tool chains and scanning pipelines.</li>
+    <li><strong>JS (JavaScript)</strong> – Useful for payload creation and DOM-based XSS exploitation.</li>
+  </ul>
+
+  <h2>📋 Wordlists</h2>
+  <ul class="resource-list">
+    <li><a href="https://github.com/danielmiessler/SecLists" target="_blank">SecLists</a> – The most complete collection of wordlists.</li>
+    <li><code>/usr/share/wordlists/</code> – Kali Linux built-in lists (e.g., `rockyou.txt`).</li>
+  </ul>
+
+  <h2>📦 Useful GitHub Repos</h2>
+  <ul class="resource-list">
+    <li><a href="https://github.com/projectdiscovery" target="_blank">ProjectDiscovery</a> – Suite of tools including subfinder, httpx, nuclei.</li>
+    <li><a href="https://github.com/tomnomnom" target="_blank">tomnomnom</a> – Creator of many essential Go-based recon tools.</li>
+    <li><a href="https://github.com/devanshbatham/ParamSpider" target="_blank">ParamSpider</a></li>
+  </ul>
+
+  <h2>⚙️ Browser Extensions</h2>
+  <ul class="resource-list">
+    <li><strong>HackTools</strong> – Payload helper inside DevTools.</li>
+    <li><strong>Wappalyzer</strong> – Identify technologies used on websites.</li>
+    <li><strong>ModHeader</strong> – Modify request headers on the fly.</li>
+    <li><strong>Shodan Plugin</strong> – Quick lookup of server details.</li>
+  </ul>
+
+  <h2>🔐 Passwords & Hashes</h2>
+  <ul class="resource-list">
+    <li><strong>hash-identifier</strong> – Identify hash types.</li>
+    <li><strong>John the Ripper</strong> – Password cracker for many formats.</li>
+    <li><strong>Hydra</strong> – Bruteforcing credentials over various protocols.</li>
+  </ul>
+
+  <h2>🎓 Want to see these tools in action?</h2>
+  <p>Check out tutorials under <a href="/learn/guides">Guides</a> or jump into <a href="/learn/ctfs">CTFs</a> to apply your tools on real labs.</p>
+</main>
+
+<%- include('../partials/footer') %>

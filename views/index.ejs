@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head', {
+  page: 'About',
+  metaTitle: 'About | Prathmesh Dasi',
+  metaDescription: 'Learn more about Prathmesh Dasi, a self-taught security researcher from India.',
+  canonicalUrl: 'http://localhost:3000/about'
+}) %>
+<body>
+  <%- include('partials/header') %>
+
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Prathmesh Dasi</h1>
+      <h2 id="typing"></h2>
+      <p>Uncovering <code>vulnerabilities</code>, ethically.</p>
+
+      <div>
+        <a href="/findings" class="cta">View My Findings</a>
+        <a href="/blog" class="cta">Read My Blog</a>
+        <a href="/files/resume.pdf" download class="cta">
+          <i class="fas fa-file-download"></i> Download My Resume
+        </a>
+      </div>
+    </section>
+
+    <!-- Findings Preview -->
+    <section class="content">
+      <h2>🛡️ Latest Findings</h2>
+      <ul>
+        <% findings.slice(0, 2).forEach(f => { %>
+          <li style="margin-bottom: 1rem;">
+            <strong><%= f.title %></strong><br>
+            <span style="font-size: 0.9rem; color: #8b949e;"><%= f.category %></span>
+            <p><%= f.description.slice(0, 100) %>...</p>
+            <a href="/findings" class="cta">Read More</a>
+          </li>
+        <% }) %>
+      </ul>
+    </section>
+
+    <!-- Blog Preview -->
+    <section class="content">
+      <h2>📝 Recent Blog Posts</h2>
+      <ul>
+        <% blogPosts.slice(0, 2).forEach(post => { %>
+          <li style="margin-bottom: 1rem;">
+            <strong><%= post.title %></strong>
+            <p><%= post.content.slice(0, 100) %>...</p>
+            <a href="/blog" class="cta">Read More</a>
+          </li>
+        <% }) %>
+      </ul>
+    </section>
+  </main>
+
+  <%- include('partials/footer') %>
+
+  <!-- Typing Animation Script -->
+
+
+  
+</body>
+</html>

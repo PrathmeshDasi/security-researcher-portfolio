@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head', {
+  page: 'About',
+  metaTitle: 'About | Prathmesh Dasi',
+  metaDescription: 'Learn more about Prathmesh Dasi, a self-taught security researcher from India.',
+  canonicalUrl: 'http://localhost:3000/about'
+}) %>
+<body>
+  <%- include('partials/header') %>
+
+
+<main class="content">
+  <h1>🏁 Capture The Flag (CTF) for Cybersecurity Learning</h1>
+  <p>CTFs are hands-on cybersecurity challenges that simulate real-world vulnerabilities and help you sharpen your hacking skills in a legal environment.</p>
+
+  <hr>
+
+  <h2>🔍 What Are CTFs?</h2>
+  <p>CTFs (Capture The Flags) are puzzle-like exercises that test your knowledge in areas such as web security, cryptography, reverse engineering, binary exploitation, OSINT, and forensics. The goal is to "capture" flags — special tokens — by solving challenges.</p>
+
+  <h2>📦 Types of CTF Challenges</h2>
+  <ul class="resource-list">
+    <li><strong>Web</strong> – Exploiting web vulnerabilities (XSS, SQLi, SSRF, etc.)</li>
+    <li><strong>Crypto</strong> – Breaking or analyzing weak encryption</li>
+    <li><strong>Reverse Engineering</strong> – Decompiling programs to understand their logic</li>
+    <li><strong>Binary Exploitation</strong> – Buffer overflows, format strings, shellcode, etc.</li>
+    <li><strong>OSINT</strong> – Open-source intelligence from public data</li>
+    <li><strong>Forensics</strong> – Analyzing disk images, logs, or memory dumps</li>
+  </ul>
+
+  <h2>🧪 Best Platforms to Practice</h2>
+  <ul class="resource-list">
+    <li><a href="https://tryhackme.com/" target="_blank">TryHackMe</a> – Guided learning with beginner to advanced rooms.</li>
+    <li><a href="https://hackthebox.com/" target="_blank">Hack The Box</a> – Realistic machines and CTF challenges.</li>
+    <li><a href="https://ctflearn.com/" target="_blank">CTFLearn</a> – Great beginner-friendly CTF platform.</li>
+    <li><a href="https://picoctf.org/" target="_blank">picoCTF</a> – Beginner-friendly and school-oriented CTFs.</li>
+    <li><a href="https://root-me.org/" target="_blank">Root-Me</a> – Covers a wide range of hacking topics.</li>
+    <li><a href="https://cyberdefenders.org/" target="_blank">CyberDefenders</a> – Forensics-focused blue team CTFs.</li>
+  </ul>
+
+  <h2>🧠 Why Do CTFs Matter?</h2>
+  <ul class="resource-list">
+    <li>They help you apply theory in real scenarios.</li>
+    <li>Improve problem-solving and creativity under pressure.</li>
+    <li>Learn commonly exploited vulnerabilities in web and systems.</li>
+    <li>Boost your portfolio and GitHub with solved writeups.</li>
+    <li>Many recruiters value practical CTF experience more than degrees.</li>
+  </ul>
+
+  <h2>📖 Writeups & Community</h2>
+  <ul class="resource-list">
+    <li><a href="https://ctftime.org/" target="_blank">CTFTime</a> – Track upcoming CTF events & team rankings.</li>
+    <li><a href="https://github.com/ctfs" target="_blank">GitHub: ctfs</a> – Collection of writeups & challenges.</li>
+    <li>Search on Medium or HackTheBox forums for walkthroughs.</li>
+  </ul>
+
+  <h2>🚀 Pro Tips to Get Started</h2>
+  <ol>
+    <li>Pick beginner CTFs on TryHackMe or picoCTF.</li>
+    <li>Use tools like Burp Suite, Ghidra, CyberChef, strings, etc.</li>
+    <li>Don’t skip the writeups — they’re pure gold for learning.</li>
+    <li>Join Discord or Telegram CTF groups for hints and collab.</li>
+  </ol>
+
+  <p>🎯 Next: Dive into practical step-by-step <a href="/learn/guides">Guides</a> to apply what you’ve learned!</p>
+</main>
+
+<%- include('../partials/footer') %>

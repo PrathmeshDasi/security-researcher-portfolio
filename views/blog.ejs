@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head', {
+  page: 'About',
+  metaTitle: 'About | Prathmesh Dasi',
+  metaDescription: 'Learn more about Prathmesh Dasi, a self-taught security researcher from India.',
+  canonicalUrl: 'http://localhost:3000/about'
+}) %>
+<body>
+  <%- include('partials/header') %>
+
+<section class="content">
+  <h2>Bug Bounty Blog</h2>
+  <p>Tips, experiences, and thoughts on ethical hacking and my learning journey.</p>
+
+  <% blogPosts.forEach(post => { %>
+    <div class="blog-post">
+      <h3><%= post.title %></h3>
+      <p><%= post.content %></p>
+      <p class="tags">Tags: 
+        <% post.tags.forEach(tag => { %>
+          <span class="tag"><%= tag %></span>
+        <% }) %>
+      </p>
+    </div>
+  <% }) %>
+</section>
+
+<%- include('partials/footer') %>

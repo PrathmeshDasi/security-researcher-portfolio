@@ -1,0 +1,16 @@
+<%- include('../partials/header') %>
+
+<section class="content">
+  <h2>Edit Bug Bounty Finding</h2>
+  <form method="POST" action="/admin/update-finding">
+    <input type="hidden" name="originalTitle" value="<%= finding.title %>" />
+    <input type="text" name="title" value="<%= finding.title %>" required />
+    <input type="text" name="category" value="<%= finding.category %>" required />
+    <textarea name="description" rows="6" required><%= finding.description %></textarea>
+    <input type="text" name="reward" value="<%= finding.reward %>" />
+    <input type="text" name="tools" value="<%= finding.tools.join(', ') %>" />
+    <button type="submit">Update Finding</button>
+  </form>
+</section>
+
+<%- include('../partials/footer') %>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head', {
+  page: 'About',
+  metaTitle: 'About | Prathmesh Dasi',
+  metaDescription: 'Learn more about Prathmesh Dasi, a self-taught security researcher from India.',
+  canonicalUrl: 'http://localhost:3000/about'
+}) %>
+<body>
+  <%- include('partials/header') %>
+
+
+<main class="content">
+  <h1>🐞 Bug Bounty Hunting</h1>
+  <p>Bug bounty hunting is the practice of finding and reporting security vulnerabilities in software or platforms in exchange for rewards (bounties). It’s a modern, ethical way to turn hacking skills into a career.</p>
+
+  <hr>
+
+  <h2>🚀 Why Bug Bounties?</h2>
+  <ul class="resource-list">
+    <li>💰 Earn money legally for finding real-world vulnerabilities.</li>
+    <li>📜 Build a public reputation via platforms like HackerOne and Bugcrowd.</li>
+    <li>🧠 Learn advanced security concepts with real systems, not simulations.</li>
+    <li>📈 It’s a valid career path—even without a degree!</li>
+  </ul>
+
+  <h2>📋 What You’ll Need to Know</h2>
+  <ul class="resource-list">
+    <li>✔️ Strong understanding of OWASP Top 10 (XSS, SQLi, SSRF, IDOR...)</li>
+    <li>✔️ Hands-on with Burp Suite, browser dev tools, proxy tools</li>
+    <li>✔️ API testing skills (Postman, curl, REST/GraphQL knowledge)</li>
+    <li>✔️ Recon techniques (subdomain enum, Google Dorks, ffuf, etc.)</li>
+    <li>✔️ Basic scripting (Python, Bash, JavaScript)</li>
+  </ul>
+
+  <h2>🎯 Top Bug Bounty Platforms</h2>
+  <ul class="resource-list">
+    <li><a href="https://hackerone.com" target="_blank">HackerOne</a> – One of the largest platforms with big-name programs.</li>
+    <li><a href="https://bugcrowd.com" target="_blank">Bugcrowd</a> – Public and private programs, VRT-based submission system.</li>
+    <li><a href="https://intigriti.com" target="_blank">Intigriti</a> – European focus, pays in Euros.</li>
+    <li><a href="https://yeswehack.com" target="_blank">YesWeHack</a> – France-based, growing quickly.</li>
+    <li><a href="https://openbugbounty.org" target="_blank">Open Bug Bounty</a> – No invite needed, XSS-focused, public leaderboard.</li>
+  </ul>
+
+  <h2>🧪 Where to Practice</h2>
+  <ul class="resource-list">
+    <li><a href="https://portswigger.net/web-security" target="_blank">PortSwigger Web Security Academy</a> – Best hands-on for web vuln.</li>
+    <li><a href="https://www.hackthebox.com/" target="_blank">Hack The Box</a></li>
+    <li><a href="https://tryhackme.com/" target="_blank">TryHackMe</a></li>
+    <li><a href="https://vulnhub.com/" target="_blank">VulnHub</a> – Boot2root VMs for testing offline.</li>
+    <li><a href="https://google-gruyere.appspot.com/" target="_blank">Google Gruyere</a> – Web app made to be broken.</li>
+  </ul>
+
+  <h2>🛠️ Bug Hunter’s Toolkit</h2>
+  <ul class="resource-list">
+    <li>🔍 <code>ffuf</code>, <code>dirsearch</code>, <code>gau</code>, <code>waybackurls</code></li>
+    <li>🌐 <code>Burp Suite</code>, <code>Postman</code>, browser dev tools</li>
+    <li>📜 <code>nmap</code>, <code>amass</code>, <code>subfinder</code></li>
+    <li>🐍 <code>Python</code> and <code>Bash</code> for custom automation</li>
+  </ul>
+
+  <h2>📚 More Writeups & Real Reports</h2>
+  <ul class="resource-list">
+    <li><a href="https://hackerone.com/hacktivity" target="_blank">HackerOne Hacktivity</a> – Real-world public reports.</li>
+    <li><a href="https://bugbountyhunter.com/halloffame" target="_blank">BugBountyHunter HoF</a></li>
+    <li><a href="https://www.youtube.com/@NahamSec" target="_blank">NahamSec YouTube</a> – Live hacking & content.</li>
+    <li><a href="https://twitter.com/bugbountytips" target="_blank">@bugbountytips</a> on Twitter/X – Tips in 280 chars.</li>
+  </ul>
+
+  <h2>📌 Tips to Get Started</h2>
+  <ol>
+    <li>Start reading reports on HackerOne Hacktivity.</li>
+    <li>Follow Bug Bounty YouTubers (NahamSec, InsiderPhD, STÖK...)</li>
+    <li>Practice recon on public scopes like <code>*.gitlab.com</code>, <code>*.yahoo.com</code> (read their policy first).</li>
+    <li>Submit quality reports and respect scope!</li>
+    <li>Document your learning: write blogs, share tips, and engage with the community.</li>
+  </ol>
+
+  <p>📍 Ready for tools and setup? Check out the <a href="/learn/tools">Tools</a> section next.</p>
+</main>
+
+<%- include('../partials/footer') %>

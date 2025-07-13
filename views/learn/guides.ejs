@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head', {
+  page: 'About',
+  metaTitle: 'About | Prathmesh Dasi',
+  metaDescription: 'Learn more about Prathmesh Dasi, a self-taught security researcher from India.',
+  canonicalUrl: 'http://localhost:3000/about'
+}) %>
+<body>
+  <%- include('partials/header') %>
+
+<main class="content">
+  <h1>📘 Step-by-Step Hacking Guides</h1>
+  <p>Welcome to the practical side of cybersecurity. These guides walk you through real-world techniques, labs, and bug bounty methodologies from reconnaissance to exploitation — all legally and ethically.</p>
+
+  <hr>
+
+  <h2>🕵️ Reconnaissance</h2>
+  <ul class="resource-list">
+    <li>Passive Recon using <code>Amass</code>, <code>crt.sh</code>, and Google Dorking</li>
+    <li>Subdomain Enumeration (Tools: <code>Assetfinder</code>, <code>Subfinder</code>, <code>dnsx</code>)</li>
+    <li>Port Scanning with <code>nmap</code> and <code>rustscan</code></li>
+    <li>Wayback/Archived data with <code>waybackurls</code> or <code>gau</code></li>
+    <li>JS File Analysis using <code>LinkFinder</code> and manual review</li>
+  </ul>
+
+  <h2>🧪 Vulnerability Discovery</h2>
+  <ul class="resource-list">
+    <li>Testing for <strong>XSS</strong> (Reflected, Stored, DOM)</li>
+    <li>Finding <strong>IDORs</strong> by modifying userIDs, objectIDs, etc.</li>
+    <li>Detecting <strong>SSRF</strong> using Burp Collaborator</li>
+    <li>Fuzzing parameters with <code>ffuf</code> or <code>dirsearch</code></li>
+    <li>Common Wordlists: <code>SecLists</code>, <code>PayloadsAllTheThings</code></li>
+  </ul>
+
+  <h2>🔐 Authentication & Access Control Bypass</h2>
+  <ul class="resource-list">
+    <li>JWT Token Tampering</li>
+    <li>Testing for weak login mechanisms & rate-limiting</li>
+    <li>Broken Authentication via improper session handling</li>
+    <li>Admin Panel Discovery</li>
+    <li>Exploiting misconfigured roles or insecure direct object references</li>
+  </ul>
+
+  <h2>⚠️ Practical Bug Bounty Techniques</h2>
+  <ul class="resource-list">
+    <li>Finding exposed `.git`, `.env`, `debug.log` files</li>
+    <li>Hunting for leaked API keys and secrets in JS</li>
+    <li>Broken CORS misconfigurations</li>
+    <li>Open Redirects, Clickjacking, and Host Header attacks</li>
+    <li>Chaining multiple low-severity bugs for bigger impact</li>
+  </ul>
+
+  <h2>🎯 Full Lab-Based Guides</h2>
+  <ul class="resource-list">
+    <li><a href="https://portswigger.net/web-security/all-labs" target="_blank">PortSwigger Labs</a> – Practice XSS, CSRF, SQLi, SSRF, etc.</li>
+    <li><a href="https://tryhackme.com/path/outline/pentesting" target="_blank">TryHackMe Pentesting Path</a></li>
+    <li><a href="https://www.hackthebox.com/path/starting-point" target="_blank">HTB Starting Point</a> – Beginner-friendly practical boxes</li>
+    <li><a href="https://www.hacktricks.xyz/" target="_blank">HackTricks</a> – Encyclopedia of real-world exploitation techniques</li>
+    <li><a href="https://payloads.online/" target="_blank">PayloadsOnline</a> – XSS payloads, SQLi injections, bypasses</li>
+  </ul>
+
+  <h2>📚 Methodology Templates</h2>
+  <ul class="resource-list">
+    <li><a href="https://github.com/EdOverflow/BugBountyGuide" target="_blank">EdOverflow's Bug Bounty Guide</a></li>
+    <li><a href="https://github.com/sushiwushi/bug-bounty-cheatsheet" target="_blank">Bug Bounty Cheatsheet</a></li>
+    <li><a href="https://github.com/jhaddix/tbhm" target="_blank">The Bug Hunter Methodology</a> by Jhaddix</li>
+  </ul>
+
+  <p>🚀 Next: Check out <a href="/learn/certifications">Certifications</a> if you're aiming to validate your knowledge with credentials.</p>
+</main>
+
+<%- include('../partials/footer') %>

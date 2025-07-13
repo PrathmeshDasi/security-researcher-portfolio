@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head', {
+  page: 'About',
+  metaTitle: 'About | Prathmesh Dasi',
+  metaDescription: 'Learn more about Prathmesh Dasi, a self-taught security researcher from India.',
+  canonicalUrl: 'http://localhost:3000/about'
+}) %>
+<body>
+  <%- include('partials/header') %>
+
+
+<section class="content">
+  <h2>Security Findings</h2>
+
+  <% findings.forEach(finding => { %>
+    <div class="finding">
+      <h3><%= finding.title %></h3>
+      <p><strong>Category:</strong> <%= finding.category %></p>
+      <p><%= finding.description %></p>
+      <p><strong>Reward:</strong> <%= finding.reward %></p>
+      <p><strong>Tools:</strong> <%= finding.tools.join(', ') %></p>
+    </div>
+  <% }) %>
+</section>
+
+<%- include('partials/footer') %>

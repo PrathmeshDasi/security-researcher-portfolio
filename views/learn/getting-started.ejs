@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head', {
+  page: 'About',
+  metaTitle: 'About | Prathmesh Dasi',
+  metaDescription: 'Learn more about Prathmesh Dasi, a self-taught security researcher from India.',
+  canonicalUrl: 'http://localhost:3000/about'
+}) %>
+<body>
+  <%- include('partials/header') %>
+
+
+<main class="content">
+  <h1>👨‍💻 Getting Started in Cybersecurity</h1>
+  <p>
+    Welcome to your cybersecurity journey! Whether you're completely new or have a little experience, this page will help you understand where to begin, what to learn, and how to build your skills effectively.
+  </p>
+
+  <hr>
+
+  <h2>🔐 What is Cybersecurity?</h2>
+  <p>
+    Cybersecurity is the practice of defending systems, networks, and programs from digital attacks. It covers a wide range of roles—from protecting sensitive data to performing ethical hacking to find and fix vulnerabilities before attackers do.
+  </p>
+
+  <blockquote style="font-style: italic; color: #58a6ff;">
+    “Hacking is not about breaking into systems. It's about knowing them better than anyone else.” — Unknown
+  </blockquote>
+
+  <h2>🧭 Cybersecurity Career Paths</h2>
+  <ul class="resource-list">
+    <li>🛡️ <strong>Blue Team</strong> – Defenders (SOC Analyst, Threat Hunter, Incident Responder)</li>
+    <li>⚔️ <strong>Red Team</strong> – Ethical Hackers (Pentester, Bug Bounty Hunter, Red Team Ops)</li>
+    <li>🛠️ <strong>Engineering</strong> – Secure Code, DevSecOps, Security Automation</li>
+    <li>📋 <strong>Governance</strong> – Risk Analyst, Compliance, Policy Creation</li>
+  </ul>
+
+  <h2>💡 Fundamental Concepts</h2>
+  <ul class="resource-list">
+    <li><strong>Confidentiality</strong> – Preventing unauthorized access to data</li>
+    <li><strong>Integrity</strong> – Ensuring data isn’t tampered with</li>
+    <li><strong>Availability</strong> – Making sure services are reliable & accessible</li>
+    <li><strong>Authentication vs Authorization</strong> – Know the difference!</li>
+  </ul>
+
+  <h2>🧰 Skills to Focus On (2025)</h2>
+  <ul class="resource-list">
+    <li>🔧 Basic Linux (Kali, Ubuntu), Command Line tools</li>
+    <li>🌐 Web Basics (HTTP, Cookies, Sessions, JS, Forms)</li>
+    <li>📡 Networking (TCP/IP, DNS, VPNs, Firewalls)</li>
+    <li>🔍 Vulnerabilities: XSS, SQLi, IDOR, CSRF, SSRF</li>
+    <li>🧪 Bug bounty mindset & recon methods</li>
+    <li>📦 Tools: Burp Suite, Nmap, FFUF, Amass, Subfinder</li>
+  </ul>
+
+  <h2>🧑‍🏫 How to Learn Effectively</h2>
+  <ol>
+    <li>✅ Learn the basics from free platforms</li>
+    <li>🎯 Set goals (e.g. Hack one TryHackMe room/week)</li>
+    <li>🔁 Practice regularly (don’t skip hands-on)</li>
+    <li>📖 Read real bug bounty writeups & CTF walkthroughs</li>
+    <li>👥 Join communities (Reddit, Discord, Twitter/X)</li>
+  </ol>
+
+  <h2>📚 Best Beginner-Friendly Resources</h2>
+  <ul class="resource-list">
+    <li><a href="https://tryhackme.com/" target="_blank">TryHackMe – Beginner Labs</a></li>
+    <li><a href="https://portswigger.net/web-security" target="_blank">PortSwigger Web Security Academy</a></li>
+    <li><a href="https://owasp.org/www-project-top-ten/" target="_blank">OWASP Top 10 (2021)</a></li>
+    <li><a href="https://hacker101.com/" target="_blank">Hacker101 by HackerOne</a></li>
+    <li><a href="https://academy.hackthebox.com/" target="_blank">HackTheBox Academy</a></li>
+  </ul>
+
+  <h2>🎮 Platforms to Practice</h2>
+  <ul class="resource-list">
+    <li><a href="https://tryhackme.com/" target="_blank">TryHackMe</a></li>
+    <li><a href="https://hackthebox.com/" target="_blank">Hack The Box</a></li>
+    <li><a href="https://ctftime.org/" target="_blank">CTFTime (for upcoming CTFs)</a></li>
+    <li><a href="https://bugcrowd.com/" target="_blank">Bugcrowd</a> / <a href="https://hackerone.com/" target="_blank">HackerOne</a></li>
+  </ul>
+
+  <div class="callout">
+    <p>🔥 Tip: Follow <strong>#bugbountytips</strong> and <strong>#infosec</strong> hashtags on Twitter/X for daily insights!</p>
+  </div>
+
+  <p>➡️ When you're ready to explore real-world attacks, continue to <a href="/learn/bug-bounty">Bug Bounty</a>.</p>
+</main>
+
+<%- include('../partials/footer') %>

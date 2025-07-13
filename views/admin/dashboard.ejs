@@ -1,0 +1,55 @@
+<%- include('../partials/header') %>
+
+<section class="content">
+  <h2>Welcome to Admin Dashboard</h2>
+
+  <h3>Add New Blog Post</h3>
+  <form method="POST" action="/admin/add-blog">
+    <input type="text" name="title" placeholder="Title" required />
+    <textarea name="content" placeholder="Content" rows="4" required></textarea>
+    <input type="text" name="tags" placeholder="Comma-separated tags" />
+    <button type="submit">Add Blog Post</button>
+  </form>
+
+  <h3 style="margin-top:2rem;">Your Blog Posts</h3>
+  <ul>
+    <% blogPosts.forEach(post => { %>
+      <li style="margin-bottom: 10px;">
+        <strong><%= post.title %></strong><br />
+        <a href="/admin/edit-blog?title=<%= post.title %>">Edit</a> |
+        <form method="POST" action="/admin/delete-blog" style="display:inline;">
+          <input type="hidden" name="title" value="<%= post.title %>" />
+          <button type="submit">Delete</button>
+        </form>
+      </li>
+    <% }); %>
+  </ul>
+
+  <hr />
+
+  <h3>Add New Finding</h3>
+  <form method="POST" action="/admin/add-finding">
+    <input type="text" name="title" placeholder="Finding Title" required />
+    <input type="text" name="category" placeholder="Category" required />
+    <textarea name="description" placeholder="Description" rows="4" required></textarea>
+    <input type="text" name="reward" placeholder="Reward" />
+    <input type="text" name="tools" placeholder="Tools (comma-separated)" />
+    <button type="submit">Add Finding</button>
+  </form>
+
+  <h3 style="margin-top:2rem;">Your Findings</h3>
+  <ul>
+    <% findings.forEach(finding => { %>
+      <li style="margin-bottom: 10px;">
+        <strong><%= finding.title %></strong><br />
+        <a href="/admin/edit-finding?title=<%= finding.title %>">Edit</a> |
+        <form method="POST" action="/admin/delete-finding" style="display:inline;">
+          <input type="hidden" name="title" value="<%= finding.title %>" />
+          <button type="submit">Delete</button>
+        </form>
+      </li>
+    <% }); %>
+  </ul>
+</section>
+
+<%- include('../partials/footer') %>
