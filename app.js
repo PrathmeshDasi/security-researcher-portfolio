@@ -273,7 +273,7 @@ app.post('/admin/delete-finding', isAuthenticated, (req, res) => {
 });
 
 // Start Server
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 10000;
 app.listen(PORT, () => {
   console.log(`🌐 Portfolio running at http://localhost:${PORT}`);
 });
