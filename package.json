@@ -2,8 +2,9 @@
   "name": "website_ethic",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
+      "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -21,4 +22,5 @@
     "sanitize-html": "^2.17.0",
     "xss-clean": "^0.1.4"
   }
+  
 }
