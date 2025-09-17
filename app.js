@@ -234,35 +234,39 @@ app.post('/admin/delete-blog', isAuthenticated, (req, res) => {
 
 
 
-
-// === Admin Findings Management ===
-app.post('/admin/add-finding', isAuthenticated, (req, res) => {
-  const { title, category, description, reward, tools } = req.body;
-  findings.unshift({
-    title,
-    category,
-    description,
-    reward,
-    tools: tools.split(',').map(tool => tool.trim())
-  });
-  res.redirect('/admin/dashboard');
-
-
+// === Admin Blog Management ===
 app.post('/admin/add-blog', isAuthenticated, (req, res) => {
   const { title, content, tags } = req.body;
 
   const cleanTitle = sanitizeHtml(title);
   const cleanContent = sanitizeHtml(content, {
-    allowedTags: ['b', 'i', 'em', 'strong', 'code', 'p', 'ul', 'li'],
-    allowedAttributes: {}
+    allowedTags: ['b', 'i', 'em', 'strong', 'code', 'p', 'ul', 'li', 'a'],
+    allowedAttributes: { 'a': ['href'] }
   });
-
   const cleanTags = tags.split(',').map(t => sanitizeHtml(t.trim()));
 
   blogPosts.unshift({ title: cleanTitle, content: cleanContent, tags: cleanTags });
   res.redirect('/admin/dashboard');
 });
 
+app.post('/admin/delete-blog', isAuthenticated, (req, res) => {
+  const { title } = req.body;
+  const index = blogPosts.findIndex(post => post.title === title);
+  if (index !== -1) blogPosts.splice(index, 1);
+  res.redirect('/admin/dashboard');
+});
+
+// === Admin Findings Management ===
+app.post('/admin/add-finding', isAuthenticated, (req, res) => {
+  const { title, category, description, reward, tools } = req.body;
+  findings.unshift({
+    title: sanitizeHtml(title),
+    category: sanitizeHtml(category),
+    description: sanitizeHtml(description),
+    reward: sanitizeHtml(reward),
+    tools: tools.split(',').map(tool => sanitizeHtml(tool.trim()))
+  });
+  res.redirect('/admin/dashboard');
 });
 
 app.post('/admin/delete-finding', isAuthenticated, (req, res) => {
@@ -271,6 +275,44 @@ app.post('/admin/delete-finding', isAuthenticated, (req, res) => {
   if (index !== -1) findings.splice(index, 1);
   res.redirect('/admin/dashboard');
 });
+
+
+// // === Admin Findings Management ===
+// app.post('/admin/add-finding', isAuthenticated, (req, res) => {
+//   const { title, category, description, reward, tools } = req.body;
+//   findings.unshift({
+//     title,
+//     category,
+//     description,
+//     reward,
+//     tools: tools.split(',').map(tool => tool.trim())
+//   });
+//   res.redirect('/admin/dashboard');
+
+
+// app.post('/admin/add-blog', isAuthenticated, (req, res) => {
+//   const { title, content, tags } = req.body;
+
+//   const cleanTitle = sanitizeHtml(title);
+//   const cleanContent = sanitizeHtml(content, {
+//     allowedTags: ['b', 'i', 'em', 'strong', 'code', 'p', 'ul', 'li'],
+//     allowedAttributes: {}
+//   });
+
+//   const cleanTags = tags.split(',').map(t => sanitizeHtml(t.trim()));
+
+//   blogPosts.unshift({ title: cleanTitle, content: cleanContent, tags: cleanTags });
+//   res.redirect('/admin/dashboard');
+// });
+
+// });
+
+// app.post('/admin/delete-finding', isAuthenticated, (req, res) => {
+//   const { title } = req.body;
+//   const index = findings.findIndex(finding => finding.title === title);
+//   if (index !== -1) findings.splice(index, 1);
+//   res.redirect('/admin/dashboard');
+// });
 
 // Start Server
 const PORT = process.env.PORT || 10000;
