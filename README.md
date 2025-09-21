@@ -4,7 +4,7 @@ A minimal and professional portfolio built using **Node.js**, **Express**, and *
 
 ## 🚀 Live Website
 
-[🔗 Visit Portfolio](https://security-researcher-portfolio.up.railway.app/)
+[🔗 Visit Portfolio](https://prathmeshdasi-portfolio-ylfv.onrender.com/)
 
 ## 📁 Features
 
@@ -20,7 +20,7 @@ A minimal and professional portfolio built using **Node.js**, **Express**, and *
 - **Frontend**: EJS, HTML, CSS, JavaScript
 - **Styling**: Custom CSS, Font Awesome
 - **Email**: Nodemailer
-- **Deployment**: Railway
+- **Deployment**: Render
 
 ## 🔥 Reach Out 
 - LinkedIn - Prathamesh Dasi
